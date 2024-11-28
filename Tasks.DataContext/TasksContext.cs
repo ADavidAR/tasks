@@ -5,15 +5,15 @@ namespace Tasks.EntityModels;
 
 public partial class TasksContext : DbContext
 {
-    DbSet<Activity> Activities { set; get; }
+    public virtual DbSet<Activity> Activities { set; get; }
 
-    DbSet<Person> Persons { set; get; }
+    public virtual DbSet<Person> Persons { set; get; }
 
-    DbSet<Task> Tasks { set; get; }
+    public virtual DbSet<Task> Tasks { set; get; }
 
-    DbSet<TaskException> TaskExceptions { set; get; }
+    public virtual DbSet<TaskException> TaskExceptions { set; get; }
 
-    DbSet<ActivityDetail> ActivityDetails { set; get; }
+    public virtual DbSet<ActivityDetail> ActivityDetails { set; get; }
 
     public TasksContext()
     {
@@ -79,8 +79,32 @@ public partial class TasksContext : DbContext
             entity.Property( e => e.Description).HasDefaultValue("");
         });
 
-        // TO DO definir claves compuestas para ActivityDetails y TaskException 
-        // TO DO ver caso en que un ActivityDetail no tiene en cargado (PersonID)tendría que tener valor por defecto
-    }
+        modelBuilder.Entity<ActivityDetail>( entity =>
+        {
+            entity.HasOne(d => d.Person)
+                .WithMany( p => p.ActivityDetails)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
+            entity.HasOne(d => d.Task)
+                .WithMany( p => p.ActivityDetails)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.Activity)
+                .WithMany( p => p.ActivityDetails)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<TaskException>( entity =>
+        {
+            entity.HasOne(d => d.Task)
+                .WithMany( p => p.TaskExceptions)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(te => te.Person)
+                .WithMany(p => p.TaskExceptions)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+        
+        
+    }
 }
