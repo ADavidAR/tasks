@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +16,9 @@
 <body>
     <header>
         <nav>
-            <span class="navActivity"><strong>Actividades</strong></span>
-            <span class="navTask"><strong>Tareas</strong></span>
-            <span class="navPerson"><strong>Personas</strong></span>
+            <a class="navActivity" asp-page="/Activities"><strong>Actividades</strong></a>
+            <a class="navTask" asp-page="/Tasks"><strong>Tareas</strong></a>
+            <a class="navPerson" asp-page="/Persons"><strong>Personas</strong></a>
         </nav>
     </header>
     @RenderBody()

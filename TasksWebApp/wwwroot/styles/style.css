@@ -36,7 +36,7 @@ nav{
     padding-top: auto;
     padding-bottom: auto;
 }
-span[class^="nav"] {
+a[class^="nav"] {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +45,10 @@ span[class^="nav"] {
     padding: auto;
     font-size: 35px;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
 
-span[class^="nav"]:hover {
+a[class^="nav"]:hover {
     background-color: var(--navColorSelect);
 }
