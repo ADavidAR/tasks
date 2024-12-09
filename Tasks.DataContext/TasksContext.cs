@@ -36,6 +36,11 @@ public partial class TasksContext : DbContext
                 // En el directorio <proyecto>\bin\<Debug|Release>\net8.0.
                 path = Path.Combine("..", "..", "..", "..", database);
             }
+            else if (dir.EndsWith("wwwroot"))
+            {
+                path = Path.Combine(dir, "tasks.db");
+
+            }
             else
             {
                 // En el directorio del proyecto.

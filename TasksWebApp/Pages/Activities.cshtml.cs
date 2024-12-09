@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using Tasks.EntityModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tasks.Web.Pages;
 public class ActivitiesModel : PageModel
@@ -47,7 +48,7 @@ public void OnPost(){
     public IActionResult OnPostDelete()
     {
        SetViewData();
-        Activity = _db.Activities.First(a => a.ActivityID == Id);
+        Activity = _db.Activities.Include(a => a.ActivityDetails).First(a => a.ActivityID == Id);
         _db.Activities.Remove(Activity);
         _db.SaveChanges();
         return RedirectToPage("/Activities");

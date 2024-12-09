@@ -66,7 +66,7 @@ public class TasksModel : PageModel
 
   private bool IsIdInUse(int id)
   {
-    if(_db.TaskExceptions.Any(te => te.TaskID == id) && _db.ActivityDetails.Any(ad => ad.TaskID == id)){
+    if(_db.TaskExceptions.Any(te => te.TaskID == id) || _db.ActivityDetails.Any(ad => ad.TaskID == id)){
       return true; 
     }
     return false;

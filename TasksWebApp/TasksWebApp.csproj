@@ -11,6 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="..\db\tasks.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
     <Using Include="System.Console" Static="true"/>
   </ItemGroup>
 

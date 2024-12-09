@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@property --navColor {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(99, 166, 255);
+}
+
+@property --navColorSelect {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(81, 130, 194);
+}
+
+:root {
+    --navColor: <color> 
+}
+header{
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--navColor) ;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 100%;
+    display: flex;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+a[class^="nav"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 200px;
+    padding: auto;
+    font-size: 35px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+a[class^="nav"]:hover, #home:hover{
+    background-color: var(--navColorSelect);
+}

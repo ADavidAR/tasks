@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/be1995e7-bd9d-490a-a1e7-6b825b333699/resourceGroups/Tasks/providers/Microsoft.Web/sites/TasksWA",
+    "appService.deploySubpath": "TasksWebApp\\Publish"
+}

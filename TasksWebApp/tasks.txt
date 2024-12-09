@@ -1,0 +1,2240 @@
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:25.829 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:43.004 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:52.925 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:55.217 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:56.672 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:14:57.987 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:00.028 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:02.182 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:04.175 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 01:15:04.250 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 01:15:04.268 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 01:15:04.274 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 01:15:04.275 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:05.826 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:07.096 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:08.588 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:10.957 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:15:16.749 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:21:10.385 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 01:21:15.284 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:31.740 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:42.034 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__todayDate_0='?' (DbType = DateTime), @__oneMonthLaterDate_1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."Date" >= @__todayDate_0 AND "a"."Date" <= @__oneMonthLaterDate_1
+      ORDER BY "a"."Date"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:43.653 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 03:51:43.754 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:43.806 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:43.814 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:43.816 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:50.611 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+      FROM "Persons" AS "p"
+      WHERE "p"."PersonID" = @__id_0
+      LIMIT 2
+dbug: 9/12/2024 03:51:50.706 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:50.737 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 03:51:50.739 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:50.742 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:50.745 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:54.037 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 03:51:54.098 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:56.791 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:51:56.826 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 03:51:56.830 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:56.832 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:51:56.835 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:02.663 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:04.124 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 03:52:04.130 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 03:52:04.136 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 03:52:04.142 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:21.003 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:22.891 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:26.884 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__Id_0
+      LIMIT 1
+dbug: 9/12/2024 03:52:26.894 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Activities"
+      WHERE "ActivityID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:26.910 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:30.343 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 03:52:30.344 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:52:30.347 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:52:30.348 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:38.075 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 2), @p1='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Persons" ("FirstName", "LastName")
+      VALUES (@p0, @p1)
+      RETURNING "PersonID";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 03:52:38.106 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 03:52:38.109 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:52:38.111 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:52:38.113 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 03:52:38.115 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:01:18.116 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:01:28.237 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."FirstName", "t"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM (
+          SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+          FROM "Persons" AS "p"
+          WHERE "p"."PersonID" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "ActivityDetails" AS "a" ON "t"."PersonID" = "a"."PersonID"
+      ORDER BY "t"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:01:28.411 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:35.164 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:42.421 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."FirstName", "t"."LastName", "t0"."PersonID", "t0"."TaskID"
+      FROM (
+          SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+          FROM "Persons" AS "p"
+          WHERE "p"."PersonID" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "TaskExceptions" AS "t0" ON "t"."PersonID" = "t0"."PersonID"
+      ORDER BY "t"."PersonID", "t0"."PersonID"
+dbug: 9/12/2024 04:02:42.642 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:02:42.650 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:02:42.652 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:42.798 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:02:42.847 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:42.871 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:42.874 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:52.567 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 3), @p1='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Persons" ("FirstName", "LastName")
+      VALUES (@p0, @p1)
+      RETURNING "PersonID";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:52.605 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:02:52.607 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:52.612 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:52.615 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:52.617 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:55.846 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:02:55.910 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:57.785 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:02:57.801 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:02:57.803 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:57.805 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:57.806 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:02:57.808 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:05.342 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."FirstName", "t"."LastName", "t0"."PersonID", "t0"."TaskID"
+      FROM (
+          SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+          FROM "Persons" AS "p"
+          WHERE "p"."PersonID" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "TaskExceptions" AS "t0" ON "t"."PersonID" = "t0"."PersonID"
+      ORDER BY "t"."PersonID", "t0"."PersonID"
+dbug: 9/12/2024 04:03:05.347 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:03:05.349 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:05.364 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:05.365 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:05.368 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:05.369 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:13.444 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Persons" ("FirstName", "LastName")
+      VALUES (@p0, @p1)
+      RETURNING "PersonID";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:13.461 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:13.462 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:13.464 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:13.465 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:13.467 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:14.992 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:03:14.994 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:16.934 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:16.978 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:16.980 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:16.983 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:16.984 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:16.986 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:21.106 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:03:21.109 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:23.191 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:23.234 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:23.235 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:23.237 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:23.238 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:23.239 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:24.569 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:25.978 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:26.005 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:26.012 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:26.021 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:26.033 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:32.286 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:32.290 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:32.293 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:32.296 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:32.301 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:41.853 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:41.857 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:41.861 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:41.864 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:41.868 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:44.973 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 2), @__SearchBox_1='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      ) AND "t"."TaskName" = @__SearchBox_1
+      LIMIT 1
+dbug: 9/12/2024 04:03:44.994 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "ActivityDetails" ("ActivityID", "TaskID", "OrderIndex", "PersonID")
+      VALUES (@p0, @p1, @p2, @p3);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:45.009 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:45.012 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:45.014 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:45.015 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:45.017 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:47.645 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM "Persons" AS "p"
+dbug: 9/12/2024 04:03:47.650 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "ActivityDetails" AS "a"
+      WHERE "a"."ActivityID" = @__Id_0
+dbug: 9/12/2024 04:03:47.653 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "ActivityDetails" AS "a"
+      WHERE "a"."ActivityID" = @__Id_0
+dbug: 9/12/2024 04:03:47.662 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+      FROM "Persons" AS "p"
+      LIMIT 1 OFFSET @__p_0
+dbug: 9/12/2024 04:03:47.663 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+      FROM "Persons" AS "p"
+      LIMIT 1 OFFSET @__p_0
+dbug: 9/12/2024 04:03:47.665 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+      FROM "Persons" AS "p"
+      LIMIT 1 OFFSET @__p_0
+dbug: 9/12/2024 04:03:47.667 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "ActivityDetails" AS "a"
+      WHERE "a"."ActivityID" = @__Id_0
+dbug: 9/12/2024 04:03:47.680 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      UPDATE "ActivityDetails" SET "PersonID" = @p0
+      WHERE "ActivityID" = @p1 AND "TaskID" = @p2
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:47.698 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:47.699 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:47.701 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:47.703 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:47.704 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:50.672 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:50.674 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:50.676 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:50.678 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:50.680 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:54.817 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:56.688 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:03:56.690 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:56.692 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:03:56.694 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:03:56.696 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:03:57.902 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:03:57.903 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:57.904 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:57.905 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:03:57.906 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:01.551 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:04:01.553 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:04.461 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:04.503 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:04:04.505 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:04:04.506 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:04:04.507 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:04:04.509 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:06.921 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."FirstName", "t"."LastName", "t0"."PersonID", "t0"."TaskID"
+      FROM (
+          SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+          FROM "Persons" AS "p"
+          WHERE "p"."PersonID" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "TaskExceptions" AS "t0" ON "t"."PersonID" = "t0"."PersonID"
+      ORDER BY "t"."PersonID", "t0"."PersonID"
+dbug: 9/12/2024 04:04:06.924 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:04:06.954 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:04:06.955 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:06.968 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:04:06.970 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:04:06.971 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:04:06.973 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:30.190 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:32.386 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:04:32.390 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:04:32.394 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:04:32.397 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:04:45.210 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:05:54.038 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:05:54.039 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:05:54.041 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:05:54.042 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:05.453 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:10.482 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:11.981 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:06:11.984 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:06:11.986 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:06:11.987 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:06:11.989 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:15.105 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:16.201 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:06:16.207 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:16.209 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:16.211 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:17.794 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:06:17.796 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:25.834 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:28.484 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:06:28.485 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:28.487 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:28.489 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:30.242 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:30.734 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:31.813 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:06:31.815 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:06:31.817 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:06:31.819 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:06:31.821 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:33.764 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:06:33.765 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:33.767 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:06:33.768 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:06:34.505 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:25.105 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 1)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+dbug: 9/12/2024 04:07:25.109 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 1)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Tasks" ("TaskName")
+      VALUES (@p0)
+      RETURNING "TaskID", "Description";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:25.123 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:26.314 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:07:26.316 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:07:26.317 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:26.333 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:33.474 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      ORDER BY "a"."Date" DESC
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:34.430 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."ActivityName", "a"."Date", "a"."Description"
+      FROM "Activities" AS "a"
+      WHERE "a"."ActivityID" = @__id_0
+      LIMIT 1
+dbug: 9/12/2024 04:07:34.431 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:07:34.432 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+dbug: 9/12/2024 04:07:34.433 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__usedTasks_0='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__usedTasks_0) AS "u"
+      )
+dbug: 9/12/2024 04:07:34.435 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID", "a0"."ActivityID", "a0"."ActivityName", "a0"."Date", "a0"."Description", "p"."PersonID", "p"."FirstName", "p"."LastName", "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "ActivityDetails" AS "a"
+      INNER JOIN "Activities" AS "a0" ON "a"."ActivityID" = "a0"."ActivityID"
+      LEFT JOIN "Persons" AS "p" ON "a"."PersonID" = "p"."PersonID"
+      INNER JOIN "Tasks" AS "t" ON "a"."TaskID" = "t"."TaskID"
+      WHERE "a"."ActivityID" = @__id_0
+      ORDER BY "a"."OrderIndex"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:35.379 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:07:35.381 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:07:35.383 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:07:35.384 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:07:38.623 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:17.359 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:08:17.361 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:17.362 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:17.363 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:22.788 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 3), @p1='?' (Size = 1)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Persons" ("FirstName", "LastName")
+      VALUES (@p0, @p1)
+      RETURNING "PersonID";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:22.800 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:08:22.801 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:22.802 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:22.803 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:22.804 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:25.359 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:08:25.361 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 2)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:27.145 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:27.168 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:08:27.169 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:27.170 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:27.172 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:27.173 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:27.727 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__PersonId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__PersonId_0
+      ORDER BY "t0"."TaskName"
+dbug: 9/12/2024 04:08:27.729 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__UsedTasksIds_0='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" NOT IN (
+          SELECT "u"."value"
+          FROM json_each(@__UsedTasksIds_0) AS "u"
+      )
+      ORDER BY "t"."TaskName"
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:29.618 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "TaskExceptions" ("PersonID", "TaskID")
+      VALUES (@p0, @p1);
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:29.637 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:08:29.638 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:29.639 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:29.640 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:29.641 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:32.000 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."FirstName", "t"."LastName", "t0"."PersonID", "t0"."TaskID"
+      FROM (
+          SELECT "p"."PersonID", "p"."FirstName", "p"."LastName"
+          FROM "Persons" AS "p"
+          WHERE "p"."PersonID" = @__id_0
+          LIMIT 2
+      ) AS "t"
+      LEFT JOIN "TaskExceptions" AS "t0" ON "t"."PersonID" = "t0"."PersonID"
+      ORDER BY "t"."PersonID", "t0"."PersonID"
+dbug: 9/12/2024 04:08:32.002 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:08:32.007 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "TaskExceptions"
+      WHERE "PersonID" = @p0 AND "TaskID" = @p1
+      RETURNING 1;
+dbug: 9/12/2024 04:08:32.008 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Persons"
+      WHERE "PersonID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:08:32.020 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:08:32.021 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:32.022 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:08:32.024 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:17.508 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = 1
+      LIMIT 2
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:27.152 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:11:27.266 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:11:27.316 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:11:27.320 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:29.059 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:31.879 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:31.890 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:36.579 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:36.590 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:39.306 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:39.314 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:41.624 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:41.634 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:46.177 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:46.188 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:53.944 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+dbug: 9/12/2024 04:11:54.034 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Tasks" ("TaskName")
+      VALUES (@p0)
+      RETURNING "TaskID", "Description";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:54.067 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:57.724 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+dbug: 9/12/2024 04:11:57.728 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Tasks" ("TaskName")
+      VALUES (@p0)
+      RETURNING "TaskID", "Description";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:57.739 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:59.658 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:11:59.663 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:11:59.670 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:11:59.679 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:11:59.698 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:00.982 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:00.984 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:00.987 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:12:00.989 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:01.003 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:01.635 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:01.662 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:03.569 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:03.578 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:05.592 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:05.600 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:07.414 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonID", "p"."FirstName", "p"."LastName", "a"."ActivityID", "a"."TaskID", "a"."OrderIndex", "a"."PersonID"
+      FROM "Persons" AS "p"
+      LEFT JOIN "ActivityDetails" AS "a" ON "p"."PersonID" = "a"."PersonID"
+      ORDER BY "p"."FirstName" || "p"."LastName", "p"."PersonID", "a"."ActivityID"
+dbug: 9/12/2024 04:12:07.417 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:12:07.419 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+dbug: 9/12/2024 04:12:07.420 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonID", "t"."TaskID", "t0"."TaskID", "t0"."Description", "t0"."TaskName"
+      FROM "TaskExceptions" AS "t"
+      INNER JOIN "Tasks" AS "t0" ON "t"."TaskID" = "t0"."TaskID"
+      WHERE "t"."PersonID" = @__id_0
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:08.885 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:14.830 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+dbug: 9/12/2024 04:12:14.831 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Tasks" ("TaskName")
+      VALUES (@p0)
+      RETURNING "TaskID", "Description";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:14.844 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:16.642 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Tasks" AS "t"
+          WHERE lower("t"."TaskName") = @__ToLower_0)
+dbug: 9/12/2024 04:12:16.644 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 4)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Tasks" ("TaskName")
+      VALUES (@p0)
+      RETURNING "TaskID", "Description";
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:16.656 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:19.392 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:19.394 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:19.395 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:12:19.396 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:19.412 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:20.911 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:20.923 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:23.504 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:23.511 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:26.344 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "TaskExceptions" AS "t"
+          WHERE "t"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:26.346 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "ActivityDetails" AS "a"
+          WHERE "a"."TaskID" = @__id_0)
+dbug: 9/12/2024 04:12:26.349 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__idToDelete_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      WHERE "t"."TaskID" = @__idToDelete_0
+      LIMIT 1
+dbug: 9/12/2024 04:12:26.351 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Tasks"
+      WHERE "TaskID" = @p0
+      RETURNING 1;
+Ruta a Base de Datos: C:\Users\angel\Documents\C-Sharp\tasks\db\tasks.db
+dbug: 9/12/2024 04:12:26.368 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."TaskID", "t"."Description", "t"."TaskName"
+      FROM "Tasks" AS "t"
+      ORDER BY lower("t"."TaskName")

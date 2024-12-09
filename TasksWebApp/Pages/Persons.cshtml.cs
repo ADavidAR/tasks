@@ -44,7 +44,7 @@ public class PersonsModel : PageModel
 
     public IActionResult OnPostDeletePerson(int id)
     {
-        Person p = _db.Persons.Single(p => p.PersonID == id);
+        Person p = _db.Persons.Include(p => p.TaskExceptions).Single(p => p.PersonID == id);
         _db.Persons.Remove(p);
         _db.SaveChanges();
         

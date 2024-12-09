@@ -7,8 +7,8 @@ public class TasksContextLogger
 {
   public static void WriteLine(string message)
   {
-    string path = Path.Combine(GetFolderPath(
-      SpecialFolder.DesktopDirectory), "tasks.txt");
+    
+    string path = Path.Combine(Environment.CurrentDirectory, "tasks.txt");
 
     StreamWriter textFile = File.AppendText(path);
     textFile.WriteLine(message);

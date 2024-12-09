@@ -118,10 +118,9 @@ public class ActivityDetailsModel : PageModel
         int Id = Convert.ToInt32(TempData["id"]);
 
         ActivityDetailsByID(Id);
+        UsedTasks();
 
-
-        if (ModelState.IsValid)
-        {
+       
 
             task = _db.Tasks.Where(a => !usedTasks.Contains(a.TaskID)).FirstOrDefault(a => a.TaskName == SearchBox)!;
             if (task != null)
@@ -134,15 +133,14 @@ public class ActivityDetailsModel : PageModel
                 _db.SaveChanges();
 
                 return RedirectToPage("/ActivityDetails", new { id = Id });
-            }else {
+            }
+        
+        else
+        {
             TempData["ErrorMessage"] = "Verifique los datos del formulario";
             return RedirectToPage("/ActivityDetails", new { id = Id });
         }
-
-        }
-        return BadRequest();
-
-    }
+    }
 
 
 
@@ -172,40 +170,47 @@ public class ActivityDetailsModel : PageModel
 
         int Id = Convert.ToInt32(TempData["id"]);
         int n = _db.Persons.Count();
-        if(n !=0){
-        ActivityDetails = _db.ActivityDetails.Where(a => a.ActivityID == Id);
-
-        List<int?> unavailablePerson = new();
-        foreach (var a in ActivityDetails)
+        if (n != 0)
         {
-            if (a.PersonID is not null) unavailablePerson.Add(a.PersonID);
+            ActivityDetails = _db.ActivityDetails.Where(a => a.ActivityID == Id);
+
+            List<int?> unavailablePerson = new();
+            foreach (var a in ActivityDetails)
+            {
+                if (a.PersonID is not null) { unavailablePerson.Add(a.PersonID); }
+            }
+
+            Person? Person;
+            Random random = new Random();
+
+
+            ActivityDetails = ActivityDetails.Where(a => a.PersonID == null);
+            Persons = _db.Persons.Include(a => a.TaskExceptions);
+
+            foreach (var a in ActivityDetails)
+            {
+
+                foreach (var p in Persons)
+                {
+                    int randomIndex = random.Next(n);
+                    Person = _db.Persons.Include(p => p.TaskExceptions).Skip(randomIndex).FirstOrDefault();
+                    if (permitted(a, Person) && !unavailablePerson.Contains(Person.PersonID) )
+                    {
+                        unavailablePerson.Add(Person.PersonID);
+                        a.PersonID = Person.PersonID;
+                        }
+                    
+
+                }
+
+            }
+            _db.UpdateRange(ActivityDetails);
+            _db.SaveChanges();
         }
 
-        Person? Person;
-        Random random = new Random();
-    
 
-        ActivityDetails = ActivityDetails.Where(a => a.PersonID == null);
-
-        foreach (var a in ActivityDetails)
-        {
-            
-            do
-            { 
-               int randomIndex = random.Next(n);
-               Person = _db.Persons.Skip(randomIndex) .FirstOrDefault(); 
-            } while (unavailablePerson.Contains(Person.PersonID) || !permitted(a,Person));
-
-            unavailablePerson.Add(Person.PersonID);
-            a.PersonID = Person.PersonID;
-        }
-        _db.UpdateRange(ActivityDetails);
-        _db.SaveChanges();
-    }
-
-
-        return RedirectToPage("/ActivityDetails", new { id = Id });
-    }
+        return RedirectToPage("/ActivityDetails", new { id = Id });
+    }
 
 }
 

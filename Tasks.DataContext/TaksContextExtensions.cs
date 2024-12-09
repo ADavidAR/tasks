@@ -7,16 +7,25 @@ public static class TasksContextExtensions {
 
     public static IServiceCollection AddTasksContext (
         this IServiceCollection services,
-        string relative = "..\\db",
+        string relative = "db",
         string database = "tasks.db"
     ) 
     {
         string path = Path.Combine(relative, database);
 
+
         if(!File.Exists(path))
         {
-            throw new FileNotFoundException(
-                message: $"{path} no encontrado.", fileName: path);
+            string dir = Environment.CurrentDirectory;
+            path = String.Empty;
+
+
+            if (dir.EndsWith("wwwroot"))
+            {
+                // En el directorio del proyecto.
+                path = Path.Combine(dir,database);
+                path = Path.GetFullPath(path);
+            }
         }
 
         services.AddDbContext<TasksContext>(options =>
